@@ -1,9 +1,8 @@
 body{
-	font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto", "Oxygen", "Ubuntu", "Cantarell", "Helvetica Neue", sans-serif;
-	font-size: 16px;
+	font-family: Bookerly;
+	font-size: 38px;
 	margin: 0;
 	padding: 0;
-	background-color: #fff;
 	position: relative;
 	word-wrap: break-word;
 	-ms-text-size-adjust: none;
@@ -23,7 +22,7 @@ pre{
 }
 pre, code{
 	font-family: Menlo, Monaco, Inconsolata, Consolas, "Lucida Console", monospace;
-	font-size: 12px;
+	font-size: 26px;
 }
 
 #outdated-browser{
@@ -40,10 +39,10 @@ pre, code{
 
 .icon-refresh{
 	display: inline-block;
-	width: 14px;
-	height: 18px;
+	width: 42px;
+	height: 54px;
 	background: transparent url(../images/web/refresh-icon.svg) no-repeat;
-	background-size: 14px 18px;
+	background-size: 42px 54px;
 	vertical-align: middle;
 	overflow: hidden;
 	text-indent: -999px;
@@ -58,11 +57,12 @@ pre, code{
 .view.hidden{
 	display: none;
 }
+#view-home h1 {
+	display: none;
+}
 .view>header{
-	border-bottom: 1px solid #ddd;
-	background-color: rgba(255,255,255,.95);
 	line-height: 44px;
-	height: 44px;
+	height: 75px;
 	color: #333;
 	position: absolute; /* if position:fixed is not supported */
 	position: fixed;
@@ -83,7 +83,7 @@ pre, code{
 .header-button button{
 	pointer-events: none;
 	min-width: 50px;
-	height: 30px;
+	height: 56px;
 	line-height: 25px;
 	font-weight: normal;
 	font-size: 15px;
@@ -117,18 +117,21 @@ pre, code{
 }
 .header-button-left{
 	left: 0;
+	padding: 21px 15px;
 }
 .header-button-right{
-	right: 0;
+	right: 35px;
 }
-
+#view-comments > header h1 {
+	display: none;
+}
 #view-comments .header-button-left button,
 #view-about .header-button-left button{
 	overflow: hidden;
 	text-indent: -999px;
-	min-width: 32px;
+	min-width: 51px;
 	background-image: url(../images/web/home-icon.svg);
-	background-size: 19.5px 17px;
+	background-size: 58.5px 51px;
 	background-repeat: no-repeat;
 	background-position: center;
 }
@@ -151,7 +154,7 @@ pre, code{
 	margin-top: 44px;
 }
 .view.shaded>.scroll{
-	background-color: #F6F6EF;
+	background-color: #FFF;
 }
 .view.shaded>.scroll p.foot-label{
 	margin: 15px 10px;
@@ -193,7 +196,6 @@ pre, code{
 }
 .tableview li{
 	display: block;
-	border-top: 1px solid #e0e0e0;
 	padding: 10px;
 }
 .tableview li:first-child{
@@ -237,14 +239,15 @@ pre, code{
 }
 .tableview-links li>a .metadata{
 	display: block;
-	font-size: 14px;
+	font-size: 28px;
 	color: #666d74;
 }
 .tableview-links li>a:hover .link-text{
 	text-decoration: underline;
 }
 .tableview-links li>a.detail-disclosure{
-	padding-right: 44px;
+	padding-right: 132px;
+	text-decoration: none;
 }
 .tableview-links li>a.detail-disclosure-button{
 	position: absolute;
@@ -252,17 +255,17 @@ pre, code{
 	right: 0;
 	padding: 0;
 	z-index: 2;
-	width: 44px;
+	width: 132px;
 	height: 100%;
 	text-align: center;
 	vertical-align: middle;
 }
 .tableview-links li>a.detail-disclosure-button span{
 	display: inline-block;
-	width: 17px;
-	height: 17px;
+	width: 51px;
+	height: 51px;
 	background: transparent url(../images/web/comments-icon.svg) no-repeat;
-	background-size: 17px 17px;
+	background-size: 51px 51px;
 	margin: 15px 0;
 }
 .tableview-links li>a.detail-disclosure-button:active span{
@@ -365,13 +368,16 @@ ol.grouped-tableview-links li>a:hover{
 .view .post-content header h1{
 	color: #000;
 	font-weight: normal;
-	font-size: 1em;
+	font-size: 48px;
+	line-height: 58px;
+	margin-top: 2.5%;
+
 }
 .view .post-content header .link-text{
-	font-size: 14px;
+	font-size: 28px;
 }
 .view .post-content header .metadata{
-	font-size: 14px;
+	font-size: 28px;
 	color: #666d74;
 }
 .view .post-content header .metadata a.external-link{
@@ -406,7 +412,6 @@ ol.grouped-tableview-links li>a:hover{
 .view .post-content .poll li .poll-details b{
 	font-weight: normal;
 	display: table-cell;
-	color: #333;
 }
 .view .post-content .poll li .poll-details .points{
 	display: table-cell;
@@ -438,10 +443,8 @@ ol.grouped-tableview-links li>a:hover{
 }
 
 .view section.comments{
-	font-size: 14px;
+	font-size: 32px;
 	background-color: #fff;
-	border-top: 1px solid #E0E0E0;
-	border-bottom: 1px solid #E0E0E0;
 	margin-bottom: 20px;
 }
 .view section.comments ul{
@@ -452,7 +455,6 @@ ol.grouped-tableview-links li>a:hover{
 }
 .view section.comments ul li{
 	padding: 15px;
-	border-bottom: 1px solid #E0E0E0;
 }
 .view section.comments ul>li:last-child{
 	border-bottom: 0;
@@ -462,7 +464,6 @@ ol.grouped-tableview-links li>a:hover{
 	border: 0;
 	background: transparent url(../images/web/comment-arrow.svg) no-repeat 0 4px;
 	background-size: 10px 9px;
-	color: #333;
 }
 .view section.comments p{
 	margin: 8px 0;
@@ -585,13 +586,11 @@ ol.grouped-tableview-links li>a:hover{
 }
 
 @media only screen and (min-width: 788px){
-	body{
-		background-color: #fafafa;
-	}
 	.view{
-		background-color: #fff;
-		max-width: 700px;
-		box-shadow: 0 0 1px #aaa;
+		max-width: 100%;
+	}
+	#view-comments {
+		max-width: 95%;
 	}
 	.view>header{
 		position: static;
@@ -599,4 +598,9 @@ ol.grouped-tableview-links li>a:hover{
 	.view>.scroll{
 		margin-top: 0;
 	}
+
+	a {
+		text-decoration: none;
+	}
+
 }

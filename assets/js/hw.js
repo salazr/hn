@@ -252,7 +252,7 @@
 	};
 
 	var $commentsView = $('view-comments'),
-		$commentsHeading = $commentsView.querySelector('header h1'),
+		$commentsHeading = $commentsView.querySelector('h1'),
 		$commentsSection = $commentsView.querySelector('section');
 
 	hw.comments = {
@@ -462,7 +462,7 @@
 				var view = $('view-' + name);
 				view.classList.remove('hidden');
 				hw.currentView = name;
-				hw.setTitle(view.querySelector('header h1').textContent);
+				hw.setTitle(view.querySelector('h1').textContent);
 			},
 			notfound: function(){
 				ruto.go('/');
